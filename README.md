@@ -99,7 +99,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 }
 ```
 
-**Sign-In**
+# Sign-In
 
 If set `appAuthEnable` to true, this library will try to call Twitter App first. If Twitter App not installed, will call inner browser.
 
