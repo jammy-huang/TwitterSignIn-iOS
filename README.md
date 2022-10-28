@@ -4,6 +4,8 @@ Let Twitter users into your apps quickly and easily by using inner browser or tw
 
 It is interface to the [Twitter API](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens), the sign-in process is lightly and clearly.
 
+No dependencies, framework file is tiny.
+
 Supports iOS 12+.
 
 ## Getting Started
