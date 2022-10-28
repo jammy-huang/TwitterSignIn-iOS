@@ -104,7 +104,9 @@ If set `appAuthEnable` to true, this library will try to call Twitter App first.
 ```swift
 TwitterSignIn.sharedInstance.signIn { user, error in
 	if let error = error {
-		//handle failed
+		//handle failed with TwitterSignInError
+		//the library collect all error code into TwitterSignInError
+		//Like: if (error.code == TwitterSignInError.CancelFromApp) { ... }
 		return
 	}
 	
