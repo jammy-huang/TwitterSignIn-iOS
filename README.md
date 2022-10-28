@@ -36,12 +36,12 @@ TwitterSignIn.sharedInstance.consumerSecret = "Your ConsumerSecret Value "
 TwitterSignIn.sharedInstance.callbackUrl = "Your CallbackURL Value"
 ```
 
-> Warning
+> **Note**
 > Take Care Your ConsumerSecret, you shouldn't be exposed to the public.
 
 **Sign-In with Twitter App**
 
->**Attention**
+>**Warning**
 >App authorization is not recommended!
 >It is implemented by UIApplication.open(url:), and it is easy to expose the consumerSecret and consumerKey.
 >This may create unknown and dangers risks.
