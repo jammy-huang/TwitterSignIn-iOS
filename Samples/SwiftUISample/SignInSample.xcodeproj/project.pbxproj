@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D39BF89290FA4400048B310 /* SignInSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D39BF88290FA4400048B310 /* SignInSampleApp.swift */; };
+		2D39BF8B290FA4400048B310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D39BF8A290FA4400048B310 /* ContentView.swift */; };
+		2D39BF8D290FA4410048B310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D39BF8C290FA4410048B310 /* Assets.xcassets */; };
+		2D39BF90290FA4410048B310 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D39BF8F290FA4410048B310 /* Preview Assets.xcassets */; };
+		2D39BF97290FAB0C0048B310 /* OAuth1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D39BF96290FAB0C0048B310 /* OAuth1View.swift */; };
+		2D39BF99290FAB190048B310 /* OAuth2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D39BF98290FAB190048B310 /* OAuth2View.swift */; };
+		2D39BFBB290FB6A10048B310 /* TwitterSignInV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BFBA290FB6A10048B310 /* TwitterSignInV1.framework */; };
+		2D39BFBC290FB6A10048B310 /* TwitterSignInV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BFBA290FB6A10048B310 /* TwitterSignInV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D39BFC0290FC9B10048B310 /* TwitterSignInV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BFBF290FC9B10048B310 /* TwitterSignInV2.framework */; };
+		2D39BFC1290FC9B10048B310 /* TwitterSignInV2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BFBF290FC9B10048B310 /* TwitterSignInV2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2D39BFBD290FB6A10048B310 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D39BFC1290FC9B10048B310 /* TwitterSignInV2.framework in Embed Frameworks */,
+				2D39BFBC290FB6A10048B310 /* TwitterSignInV1.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2D39BF85290FA4400048B310 /* SignInSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignInSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D39BF88290FA4400048B310 /* SignInSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSampleApp.swift; sourceTree = "<group>"; };
+		2D39BF8A290FA4400048B310 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2D39BF8C290FA4410048B310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D39BF8F290FA4410048B310 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2D39BF96290FAB0C0048B310 /* OAuth1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth1View.swift; sourceTree = "<group>"; };
+		2D39BF98290FAB190048B310 /* OAuth2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2View.swift; sourceTree = "<group>"; };
+		2D39BFBA290FB6A10048B310 /* TwitterSignInV1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TwitterSignInV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D39BFBE290FC6050048B310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2D39BFBF290FC9B10048B310 /* TwitterSignInV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TwitterSignInV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D39BF82290FA4400048B310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D39BFC0290FC9B10048B310 /* TwitterSignInV2.framework in Frameworks */,
+				2D39BFBB290FB6A10048B310 /* TwitterSignInV1.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D39BF7C290FA4400048B310 = {
+			isa = PBXGroup;
+			children = (
+				2D39BF87290FA4400048B310 /* SignInSample */,
+				2D39BF86290FA4400048B310 /* Products */,
+				2D39BF9A290FB41D0048B310 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D39BF86290FA4400048B310 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D39BF85290FA4400048B310 /* SignInSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D39BF87290FA4400048B310 /* SignInSample */ = {
+			isa = PBXGroup;
+			children = (
+				2D39BFBE290FC6050048B310 /* Info.plist */,
+				2D39BF88290FA4400048B310 /* SignInSampleApp.swift */,
+				2D39BF8A290FA4400048B310 /* ContentView.swift */,
+				2D39BF96290FAB0C0048B310 /* OAuth1View.swift */,
+				2D39BF98290FAB190048B310 /* OAuth2View.swift */,
+				2D39BF8C290FA4410048B310 /* Assets.xcassets */,
+				2D39BF8E290FA4410048B310 /* Preview Content */,
+			);
+			path = SignInSample;
+			sourceTree = "<group>";
+		};
+		2D39BF8E290FA4410048B310 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2D39BF8F290FA4410048B310 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2D39BF9A290FB41D0048B310 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D39BFBF290FC9B10048B310 /* TwitterSignInV2.framework */,
+				2D39BFBA290FB6A10048B310 /* TwitterSignInV1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D39BF84290FA4400048B310 /* SignInSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D39BF93290FA4410048B310 /* Build configuration list for PBXNativeTarget "SignInSample" */;
+			buildPhases = (
+				2D39BF81290FA4400048B310 /* Sources */,
+				2D39BF82290FA4400048B310 /* Frameworks */,
+				2D39BF83290FA4400048B310 /* Resources */,
+				2D39BFBD290FB6A10048B310 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignInSample;
+			productName = SignInSample;
+			productReference = 2D39BF85290FA4400048B310 /* SignInSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D39BF7D290FA4400048B310 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					2D39BF84290FA4400048B310 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = 2D39BF80290FA4400048B310 /* Build configuration list for PBXProject "SignInSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D39BF7C290FA4400048B310;
+			productRefGroup = 2D39BF86290FA4400048B310 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D39BF84290FA4400048B310 /* SignInSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D39BF83290FA4400048B310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D39BF90290FA4410048B310 /* Preview Assets.xcassets in Resources */,
+				2D39BF8D290FA4410048B310 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D39BF81290FA4400048B310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D39BF97290FAB0C0048B310 /* OAuth1View.swift in Sources */,
+				2D39BF99290FAB190048B310 /* OAuth2View.swift in Sources */,
+				2D39BF8B290FA4400048B310 /* ContentView.swift in Sources */,
+				2D39BF89290FA4400048B310 /* SignInSampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2D39BF91290FA4410048B310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D39BF92290FA4410048B310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D39BF94290FA4410048B310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SignInSample/Preview Content\"";
+				DEVELOPMENT_TEAM = P7P42Q7H9G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SignInSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjm.demo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D39BF95290FA4410048B310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SignInSample/Preview Content\"";
+				DEVELOPMENT_TEAM = P7P42Q7H9G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SignInSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hjm.demo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D39BF80290FA4400048B310 /* Build configuration list for PBXProject "SignInSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D39BF91290FA4410048B310 /* Debug */,
+				2D39BF92290FA4410048B310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D39BF93290FA4410048B310 /* Build configuration list for PBXNativeTarget "SignInSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D39BF94290FA4410048B310 /* Debug */,
+				2D39BF95290FA4410048B310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D39BF7D290FA4400048B310 /* Project object */;
+}
