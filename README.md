@@ -6,12 +6,20 @@ It is interface to the [Twitter API](https://developer.twitter.com/en/docs/authe
 
 No dependencies, framework file is tiny.
 
+Support both OAuth 2.0 and OAuth 1.1a.
+
 Supports iOS 12+.
 
 ## Getting Started
 
+If you want to use **OAuth 1.1a** or **Twitter App Sign-in**, please check this document: [TwitterSignInV1](doc/TwitterSignInV1.md)
+
+TwitterSignInV2 not support for Twitter App Sign-in.
+
+The document below is for TwitterSignInV2 with **Oauth 2.0**.
+
 - Generate your Twitter API keys through the [Twitter developer apps dashboard](https://apps.twitter.com/).
-- Prepare 3 required parameters: ConsumerKey , ConsumerSecret , CallbackURL
+- Prepare 2 required parameters: **Client ID** , **CallbackURL**
 - Install library using instructions below.
 
 ### Install using Cocoapods
@@ -22,86 +30,38 @@ To add TwitterSignIn to your app, add `TwitterSignIn` to your Podfile.
 pod 'TwitterSignIn'
 ```
 
+or
+
+
+```ruby
+pod 'TwitterSignIn/V2'
+```
+
 ### Usage Examples
 
 **Import**
 
 ```swift
-import TwitterSignIn
+import TwitterSignInV2
 ```
 
 **Config your parameters before call SignIn**
 
 ```swift
-TwitterSignIn.sharedInstance.consumerKey = "Your ConsumerKey Value"
-TwitterSignIn.sharedInstance.consumerSecret = "Your ConsumerSecret Value "
+TwitterSignIn.sharedInstance.clientId = "Your Client ID Value"
 TwitterSignIn.sharedInstance.callbackUrl = "Your CallbackURL Value"
 ```
 
 > **Note**
-> Take Care Your ConsumerSecret, you shouldn't be exposed to the public.
+> you can set CallbackURL to any value you want
 
-**Sign-In with Twitter App**
-
->**Warning**
->App authorization is not recommended!
->It is implemented by UIApplication.open(url:), and it is easy to expose the consumerSecret and consumerKey.
->This may create unknown and dangers risks.
->Sign-In with twitter app is off by default.
-
-If you really need to use Sign-In with twitter app, follow this step
-
-**1.set the `appAuthEnable` to ture**
-
-```swift
-TwitterSignIn.sharedInstance.appAuthEnable = true
-```
-
-**2.add `twitterauth` to LSApplicationQueriesSchemes in Plist file**
-
-```xml
-<key>LSApplicationQueriesSchemes</key>
-<array>
-	<string>twitterauth</string>
-</array>
-```
-
-**3.config you CallbackURL**
-
-For use Sign-In with Twitter App, you need to set your CallbackURL to the specified value from Twitter Dashboard. It is start with `twitterkit-` and append you ConsumerKey.
-
-Like:`twitterkit-YouConsumerKey://`
-
-**4.add the specified CallbackURL to CFBundleURLTypes in Plist file**
-
-the URLSchemes value is with out `://`
-
-```xml
-<key>CFBundleURLTypes</key>
-<array>
-	<dict>
-		<key>CFBundleTypeRole</key>
-		<string>Editor</string>
-		<key>CFBundleURLSchemes</key>
-		<array>
-			<string>twitterkit-YouConsumerKey</string>
-		</array>
-	</dict>
-</array>
-```
-
-**5.add `handleUrl` to openUrl in App Delegate**
-
-```swift
-func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-	TwitterSignIn.sharedInstance.handleUrl(url)
-	return true
-}
-```
 
 # Sign-In
 
-If set `appAuthEnable` to true, this library will try to call Twitter App first. If Twitter App not installed, will call inner browser.
+When sign-in failed, error is not null. The error.code is collected in TwitterSignInError.
+
+When sign-in success, user is not null. The user.token is Bearer Token.
+
 
 ```swift
 TwitterSignIn.sharedInstance.signIn { user, error in
@@ -113,10 +73,7 @@ TwitterSignIn.sharedInstance.signIn { user, error in
 	}
 	
 	//handle success from user
-	//user.token: for server verification
-	//user.secret: for server verification
-	//user.userId: this value return from Web auth 
-	//user.userName: this value return from App auth 
+	//user.token: Bearer Token
 }
 ```
 
