@@ -6,15 +6,26 @@
 
 import Foundation
 
-public struct TwitterUser
+@objcMembers
+@objc
+public class TwitterUser :NSObject
 {
     public var token:String
-    public var secret:String
-    public var userId:String
-    public var userName:String
+    public var secret:String? = nil
+    public var userId:String? = nil
+    public var userName:String? = nil
+    
+    init(token: String, secret: String? = nil, userId: String? = nil, userName: String? = nil) {
+        self.token = token
+        self.secret = secret
+        self.userId = userId
+        self.userName = userName
+    }
 }
 
-public class TwitterSignIn
+@objcMembers
+@objc
+public class TwitterSignIn :NSObject
 {
     public static let sharedInstance = TwitterSignIn();
     
@@ -32,9 +43,9 @@ public class TwitterSignIn
     private var _signInCallback:SignInCallback?
     
     
-    public func signIn(callback:@escaping SignInCallback)
+    public func signIn(_ withCallback:@escaping SignInCallback)
     {
-        _signInCallback = callback
+        _signInCallback = withCallback
         
         if (appAuthEnable == true) {
             signInWithApp()

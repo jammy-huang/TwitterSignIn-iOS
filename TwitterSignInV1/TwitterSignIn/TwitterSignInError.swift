@@ -42,6 +42,11 @@ public class TwitterSignInError
         return NSError(domain: ERROR_DOMAIN, code: Failed, userInfo: [NSLocalizedDescriptionKey : description ?? "UnKnow Failed"]);
     }
     
+    static public func FailedError(code:Int, description:String) ->NSError
+    {
+        return NSError(domain: ERROR_DOMAIN, code: Failed, userInfo: [NSLocalizedDescriptionKey : "\(code) \(description)"]);
+    }
+    
     static public func FailedError(error:NSError? = nil) ->NSError
     {
         if let error = error {

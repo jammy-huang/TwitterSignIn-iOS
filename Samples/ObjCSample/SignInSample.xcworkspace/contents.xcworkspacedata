@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:SignInSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../TwitterSignInV2/TwitterSignInV2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../TwitterSignInV1/TwitterSignInV1.xcodeproj">
+   </FileRef>
+</Workspace>

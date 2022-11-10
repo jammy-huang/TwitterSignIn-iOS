@@ -36,8 +36,28 @@ public class HttpClient :HttpClientSession
                 return
             }
             
-            let responseInstance:T? = HttpClient.decodeQueryString(queryString: responseStr)
-            callback(responseInstance, nil);
+            let jsonResponseInstance:T?  = HttpClient.decodeJson(jsonString: responseStr);
+            if (jsonResponseInstance != nil) {
+                callback(jsonResponseInstance, nil);
+                return;
+            }
+            
+            let queryResponseInstance:T? = HttpClient.decodeQueryString(queryString: responseStr)
+            callback(queryResponseInstance, nil);
+        }
+    }
+    
+    
+    static public func decodeJson<T: Decodable>(jsonString:String) ->T?
+    {
+        guard let jsonData = jsonString.data(using: .utf8) else { return nil }
+        
+        do {
+            let jsonDecoder = JSONDecoder()
+            let responseInstance:T = try jsonDecoder.decode(T.self, from: jsonData)
+            return responseInstance
+        } catch {
+            return nil
         }
     }
     

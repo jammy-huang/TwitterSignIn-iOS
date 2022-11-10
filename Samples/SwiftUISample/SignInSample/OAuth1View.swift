@@ -45,9 +45,9 @@ class OAuth1Data: ObservableObject {
 
                 if let user = user {
                     self.token = user.token
-                    self.secret = user.secret
-                    self.userId = user.userId
-                    self.userName = user.userName
+                    self.secret = user.secret ?? ""
+                    self.userId = user.userId ?? ""
+                    self.userName = user.userName ?? ""
                 }
             }
         }

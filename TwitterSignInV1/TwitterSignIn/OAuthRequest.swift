@@ -27,6 +27,11 @@ internal class OAuthRequest
                 return
             }
             
+            if let authErrors = response?.errors {
+                callback(nil, TwitterSignInError.FailedError(code: authErrors[0].code, description: authErrors[0].message))
+                return
+            }
+            
             callback(response, nil)
         }
     }
@@ -63,11 +68,19 @@ internal class OAuthRequest
         }
     }
     
+    struct RequestTokenError: Decodable
+    {
+        public var code:Int = -1
+        public var message:String = ""
+    }
+    
     struct RequestTokenResponse: Decodable
     {
         public var oauth_token:String?
         public var oauth_token_secret:String?
         public var oauth_callback_confirmed:String?
+        
+        public var errors:[RequestTokenError]?
     }
     
     
