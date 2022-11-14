@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '12.0'
+use_frameworks!
+inhibit_all_warnings!
+
+
+target "PodSample" do
+
+	# pod 'TwitterSignIn/V1'
+	# pod 'TwitterSignIn/V2'
+
+  	pod 'TwitterSignIn/V1', :path => '../../build/archives/'
+  	pod 'TwitterSignIn/V2', :path => '../../build/archives/'
+
+end

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-28"/>
+        </scene>
+        <!--Auth1 View Controller-->
+        <scene sceneID="Bnx-j0-scb">
+            <objects>
+                <viewController storyboardIdentifier="OAuth1View" id="3VU-P8-UZW" customClass="OAuth1ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iau-FT-Czx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Version 1.1a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5P-vc-JTn" userLabel="CurrentVersionLabel">
+                                <rect key="frame" x="10" y="57.000000000000007" width="380" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny6-LF-1fU">
+                                <rect key="frame" x="10" y="87.333333333333329" width="170" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fpV-Wy-3Mp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="mz4-LS-0QI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back to OAuth 2.0"/>
+                                <connections>
+                                    <action selector="backToOAuth2:" destination="3VU-P8-UZW" eventType="touchDown" id="p3U-Ig-qCr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy6-Te-D5D" userLabel="SignInButton">
+                                <rect key="frame" x="105" y="172.33333333333334" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="bw7-f9-7e9"/>
+                                    <constraint firstAttribute="height" constant="40" id="kHV-eL-mCM"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="sign-in-with-twitter-gray.png.twimg.1920"/>
+                                <connections>
+                                    <action selector="onSignInTwitter:" destination="3VU-P8-UZW" eventType="touchDown" id="v3b-Q9-TNe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Z-Kp-DZX" userLabel="OutputText">
+                                <rect key="frame" x="20" y="232.33333333333331" width="350" height="557.66666666666674"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xev-V2-HMy"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xev-V2-HMy" firstAttribute="bottom" secondItem="Q5Z-Kp-DZX" secondAttribute="bottom" constant="20" id="4Sv-Ex-Jn0"/>
+                            <constraint firstItem="Xev-V2-HMy" firstAttribute="trailing" secondItem="Q5Z-Kp-DZX" secondAttribute="trailing" constant="20" id="5bF-6q-9Ae"/>
+                            <constraint firstItem="ny6-LF-1fU" firstAttribute="leading" secondItem="Xev-V2-HMy" secondAttribute="leading" constant="10" id="5gH-qO-fAK"/>
+                            <constraint firstItem="ny6-LF-1fU" firstAttribute="top" secondItem="x5P-vc-JTn" secondAttribute="bottom" constant="10" id="KaO-mH-vny"/>
+                            <constraint firstItem="fy6-Te-D5D" firstAttribute="top" secondItem="ny6-LF-1fU" secondAttribute="bottom" constant="50" id="Lbt-aK-YI9"/>
+                            <constraint firstItem="Xev-V2-HMy" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ny6-LF-1fU" secondAttribute="trailing" symbolic="YES" id="RmN-EH-Wi1"/>
+                            <constraint firstItem="Q5Z-Kp-DZX" firstAttribute="leading" secondItem="Xev-V2-HMy" secondAttribute="leading" constant="20" id="UtA-4C-Iws"/>
+                            <constraint firstItem="x5P-vc-JTn" firstAttribute="top" secondItem="Xev-V2-HMy" secondAttribute="top" constant="10" id="daR-zO-jmT"/>
+                            <constraint firstItem="fy6-Te-D5D" firstAttribute="centerX" secondItem="Iau-FT-Czx" secondAttribute="centerX" id="eQO-bZ-f0d"/>
+                            <constraint firstItem="Q5Z-Kp-DZX" firstAttribute="top" secondItem="fy6-Te-D5D" secondAttribute="bottom" constant="20" id="p50-4U-Sva"/>
+                            <constraint firstItem="x5P-vc-JTn" firstAttribute="trailing" secondItem="Xev-V2-HMy" secondAttribute="trailing" id="r5K-e6-KsR"/>
+                            <constraint firstItem="x5P-vc-JTn" firstAttribute="leading" secondItem="Xev-V2-HMy" secondAttribute="leading" constant="10" id="zVL-tX-rEt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outputText" destination="Q5Z-Kp-DZX" id="qTL-Uv-lak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qU5-aP-4yk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="-28"/>
+        </scene>
+        <!--Auth2 View Controller-->
+        <scene sceneID="Cbb-ww-QDD">
+            <objects>
+                <viewController storyboardIdentifier="OAuth2View" id="Y8A-ur-t8Q" customClass="OAuth2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etP-rL-IdB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Version 2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0p-cb-VcA" userLabel="CurrentVersionLabel">
+                                <rect key="frame" x="10" y="57.000000000000007" width="380" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-r9-G6S">
+                                <rect key="frame" x="10" y="87.333333333333329" width="170" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="N3L-l1-QJE"/>
+                                    <constraint firstAttribute="height" constant="35" id="xLh-1t-Sfi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to OAuth 1.1a"/>
+                                <connections>
+                                    <action selector="gotoOAuth1:" destination="Y8A-ur-t8Q" eventType="touchDown" id="Sre-JZ-Mft"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-EN-YEi" userLabel="SignInButton">
+                                <rect key="frame" x="105" y="172.33333333333334" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NRv-4U-cwe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="mmg-dt-Y8G"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="sign-in-with-twitter-gray.png.twimg.1920"/>
+                                <connections>
+                                    <action selector="onSignInTwitter:" destination="Y8A-ur-t8Q" eventType="touchDown" id="cHb-0Z-W8F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQy-Xx-OA0" userLabel="OutputText">
+                                <rect key="frame" x="20" y="232.33333333333331" width="350" height="557.66666666666674"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G8y-jV-hKn"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WQy-Xx-OA0" firstAttribute="top" secondItem="Wcy-EN-YEi" secondAttribute="bottom" constant="20" id="2u5-5j-msP"/>
+                            <constraint firstItem="G8y-jV-hKn" firstAttribute="bottom" secondItem="WQy-Xx-OA0" secondAttribute="bottom" constant="20" id="39b-lk-rll"/>
+                            <constraint firstItem="UyK-r9-G6S" firstAttribute="leading" secondItem="G8y-jV-hKn" secondAttribute="leading" constant="10" id="3KN-LZ-T8p"/>
+                            <constraint firstItem="G8y-jV-hKn" firstAttribute="trailing" secondItem="X0p-cb-VcA" secondAttribute="trailing" id="6GH-pk-BWt"/>
+                            <constraint firstItem="G8y-jV-hKn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UyK-r9-G6S" secondAttribute="trailing" symbolic="YES" id="6yp-MX-I1r"/>
+                            <constraint firstItem="X0p-cb-VcA" firstAttribute="top" secondItem="G8y-jV-hKn" secondAttribute="top" constant="10" id="Adh-rq-tpj"/>
+                            <constraint firstItem="X0p-cb-VcA" firstAttribute="leading" secondItem="G8y-jV-hKn" secondAttribute="leading" constant="10" id="Tgs-8E-kyS"/>
+                            <constraint firstItem="WQy-Xx-OA0" firstAttribute="leading" secondItem="G8y-jV-hKn" secondAttribute="leading" constant="20" id="b54-te-BZz"/>
+                            <constraint firstItem="UyK-r9-G6S" firstAttribute="top" secondItem="X0p-cb-VcA" secondAttribute="bottom" constant="10" id="i84-q9-L0f"/>
+                            <constraint firstItem="G8y-jV-hKn" firstAttribute="trailing" secondItem="WQy-Xx-OA0" secondAttribute="trailing" constant="20" id="kwK-Dc-BR8"/>
+                            <constraint firstItem="Wcy-EN-YEi" firstAttribute="top" secondItem="UyK-r9-G6S" secondAttribute="bottom" constant="50" id="qsB-kO-wTd"/>
+                            <constraint firstItem="Wcy-EN-YEi" firstAttribute="centerX" secondItem="etP-rL-IdB" secondAttribute="centerX" id="tar-l7-D50"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outputText" destination="WQy-Xx-OA0" id="ajQ-oD-0SN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpa-oz-jHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927.6923076923076" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sign-in-with-twitter-gray.png.twimg.1920" width="158" height="28"/>
+    </resources>
+</document>
