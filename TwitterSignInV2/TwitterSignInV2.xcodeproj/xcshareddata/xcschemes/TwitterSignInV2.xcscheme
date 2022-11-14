@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D6A01F92907C5B80003C296"
-               BuildableName = "TwitterSignInV1.framework"
-               BlueprintName = "TwitterSignInV1"
-               ReferencedContainer = "container:TwitterSignInV1.xcodeproj">
+               BuildableName = "TwitterSignInV2.framework"
+               BlueprintName = "TwitterSignInV2"
+               ReferencedContainer = "container:TwitterSignInV2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D6A01F92907C5B80003C296"
-            BuildableName = "TwitterSignInV1.framework"
-            BlueprintName = "TwitterSignInV1"
-            ReferencedContainer = "container:TwitterSignInV1.xcodeproj">
+            BuildableName = "TwitterSignInV2.framework"
+            BlueprintName = "TwitterSignInV2"
+            ReferencedContainer = "container:TwitterSignInV2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
