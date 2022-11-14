@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "TwitterSignIn"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.1"
   spec.summary      = "Let Twitter users into your apps quickly and easily by using inner browser or twitter app."
 
   spec.description  = <<-DESC
@@ -18,11 +18,9 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "12.0"
 
-  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-
   spec.source       = {
-      http: "https://github.com/jammy-huang/TwitterSignIn-iOS/releases/download/#{spec.version}/Frameworks.zip",
-      sha1: '4549a040d06efbae718ab5c6701d96a9631f15a3'
+      http: "https://github.com/jammy-huang/TwitterSignIn-iOS/releases/download/#{spec.version}/TwitterSignIn_xcframeworks.zip",
+      sha1: '63f1e59418952c1f6d81ec6c7204a3f69a7199a7'
   }
 
   spec.default_subspecs = 'V2'
@@ -30,14 +28,14 @@ Pod::Spec.new do |spec|
   # OAuth 2.0
   spec.subspec 'V2' do |ss|
 
-    ss.vendored_frameworks = 'Frameworks/TwitterSignInV2.framework'
+    ss.vendored_frameworks = 'Frameworks/TwitterSignInV2.xcframework'
 
   end
 
   # OAuth 1.1a
   spec.subspec 'V1' do |ss|
 
-    ss.vendored_frameworks = 'Frameworks/TwitterSignInV1.framework'
+    ss.vendored_frameworks = 'Frameworks/TwitterSignInV1.xcframework'
 
   end
 
