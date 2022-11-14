@@ -97,7 +97,9 @@ public class TwitterSignIn :NSObject
                 return
             }
             
-            self.authorize(oauthToken: oauthToken)
+            DispatchQueue.main.async {
+                self.authorize(oauthToken: oauthToken)
+            }
         }
     }
     
