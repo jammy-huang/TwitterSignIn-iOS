@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "TwitterSignIn"
-  spec.version      = "1.1.1"
+  spec.version      = "1.1.2"
   spec.summary      = "Let Twitter users into your apps quickly and easily by using inner browser or twitter app."
 
   spec.description  = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = {
       http: "https://github.com/jammy-huang/TwitterSignIn-iOS/releases/download/#{spec.version}/TwitterSignIn_xcframeworks.zip",
-      sha1: '63f1e59418952c1f6d81ec6c7204a3f69a7199a7'
+      sha1: '8a948376b30959e9800bd6bfbd9cbac94dabbc1b'
   }
 
   spec.default_subspecs = 'V2'
